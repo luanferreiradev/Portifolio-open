@@ -40,4 +40,4 @@ Desenvolvido com **Next.js**, **TypeScript** e **Tailwind CSS**.
 ## 📄 Licença
 Este projeto está licenciado sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
 
-Desenvolvido por (Luan Ferreira)[https://github.com/luanferreiradev].
+Desenvolvido por [Luan Ferreira](https://github.com/luanferreiradev).
