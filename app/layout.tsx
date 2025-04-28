@@ -1,30 +1,30 @@
 import type React from "react";
-import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { LanguageProvider } from "@/lib/language-context";
-import { ThemeProvider } from "@/lib/theme-context"; // Use apenas este ThemeProvider
+import { ThemeProvider } from "@/lib/theme-context";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title: "Portfolio - Luan Ferreira",
-  description: "Personal portfolio website of Luan Ferreira",
-  generator: "v0.dev",
+export const metadata = {
+  title: "Luan Ferreira - Portfolio",
+  description: "Software Engineer & Full-stack Developer",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body>
+    <html lang="en">
+      <head>
+        {/* Adicionando o favicon */}
+        <link rel="icon" href="/favicon.ico" />
+      </head>
+      <body className={inter.className}>
         <ThemeProvider>
-          <LanguageProvider>
-            {children}
-          </LanguageProvider>
+          <LanguageProvider>{children}</LanguageProvider>
         </ThemeProvider>
       </body>
     </html>
